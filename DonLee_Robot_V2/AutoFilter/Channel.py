@@ -288,7 +288,7 @@ async def delall(bot: DonLee_Robot_V2, update):
     await update.reply_text("Sucessfully Deleted All Connected Chats From This Group....")
 
 
-@DonLee_Robot_V2.on_message(filters.channel & (filters.video | filters.audio | filters.document) & ~filters.edited, group=0)
+@DonLee_Robot_V2.on_message(filters.channel & (filters.video | filters.audio | filters.document)& ~filters.edited, group=0)
 async def new_files(bot: DonLee_Robot_V2, update):
     """
     A Funtion To Handle Incoming New Files In A Channel ANd Add Them To Respective Channels..
@@ -319,13 +319,7 @@ async def new_files(bot: DonLee_Robot_V2, update):
             file_name = update.document.file_name[0:-4]
             file_caption  = update.caption if update.caption else ""
             file_size = update.document.file_size
-        
-        elif update.edited:
-            file_type = "audio, document, video"
-            file_id = update.edited.file_id
-            file_name = update.edited.file_name[0:-4]
-            file_caption  = update.caption if update.caption else ""
-            file_size = update.edited.file_size   
+          
 
         for i in ["_", "|", "-", "."]: # Work Around
             try:
