@@ -319,6 +319,13 @@ async def new_files(bot: DonLee_Robot_V2, update):
             file_name = update.document.file_name[0:-4]
             file_caption  = update.caption if update.caption else ""
             file_size = update.document.file_size
+        
+        elif update.edited:
+            file_type = "audio, document, video"
+            file_id = update.edited.file_id
+            file_name = update.edited.file_name[0:-4]
+            file_caption  = update.caption if update.caption else ""
+            file_size = update.edited.file_size   
 
         for i in ["_", "|", "-", "."]: # Work Around
             try:
