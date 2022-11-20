@@ -65,8 +65,8 @@ async def cb_handler(client, query):
 
     elif query.data == "about":
         button = [[
-          Import.Button("👨‍💻𝖣𝖾𝗉𝗅𝗈𝗒", url='https://www.youtube.com/watch?v=NrbMc93aCzA'),
-          Import.Button("𝖲𝗈𝗎𝗋𝖼𝖾📦", callback_data="source")
+          Import.Button("👨‍💻𝖣𝖾𝗉𝗅𝗈𝗒", url='https://github.com/Kumbidi-swami/Donlee-Robot-V2'),
+          Import.Button("𝖲𝗈𝗎𝗋𝖼𝖾📦", url='https://t.me/adwin_mosses')
           ],[
           Import.Button("⚠️𝖧𝖾𝗅𝗉", callback_data="help"),
           Import.Button("🏠𝖧𝗈𝗆𝖾", callback_data="home"),
@@ -90,7 +90,7 @@ async def cb_handler(client, query):
     elif query.data == "filter":
         button = [[
           Import.Button("🔙 𝖡𝖺𝖼𝗄", callback_data="help"),
-          Import.Button("𝖵𝗂𝖽𝖾𝗈 📽️", url="https://youtu.be/neJ4jHC9Hng")
+          Import.Button("𝖵𝗂𝖽𝖾𝗈 📽️", url="https://t.me/+wdKBvf9ne-tlN2E1")
           ]]
         await query.message.edit_text(Text.FILTER_TEXT, reply_markup=Import.Markup(button))
 
@@ -166,7 +166,7 @@ async def cb_handler(client, query):
 
     elif query.data == "source":
         button = [[
-          Import.Button("🖥️ 𝖵𝗂𝖽𝖾𝗈 🖥️", url="https://www.youtube.com/watch?v=NrbMc93aCzA"),
+          Import.Button("🖥️ 𝖵𝗂𝖽𝖾𝗈 🖥️", url="https://t.me/+wdKBvf9ne-tlN2E1"),
           ],[
           Import.Button("🔙 𝖡𝖺𝖼𝗄", callback_data="about"),
           Import.Button("𝖢𝗋𝖾𝖽𝗂𝗍𝗌 💞", callback_data="credits")
