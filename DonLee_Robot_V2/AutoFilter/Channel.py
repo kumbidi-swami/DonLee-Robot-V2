@@ -288,7 +288,7 @@ async def delall(bot: DonLee_Robot_V2, update):
     await update.reply_text("Sucessfully Deleted All Connected Chats From This Group....")
 
 
-@DonLee_Robot_V2.on_message(filters.channel & (filters.video | filters.audio | filters.document | filters.edited), group=0)
+@DonLee_Robot_V2.on_message(filters.channel & (filters.video | filters.audio | filters.document)& ~filters.edited, group=0)
 async def new_files(bot: DonLee_Robot_V2, update):
     """
     A Funtion To Handle Incoming New Files In A Channel ANd Add Them To Respective Channels..
